@@ -7,3 +7,8 @@
 	* xml/html
 	* ruby
 1. Quick indent
+
+
+# Install
+
+run "./install.sh"
