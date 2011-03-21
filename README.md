@@ -1,6 +1,9 @@
 # Features
 
 1. Syntax Highighting
-   * XXXX 
-   * YYYY
-
+1. Code plugins
+	* javascript
+	* python
+	* xml/html
+	* ruby
+1. Quick indent
