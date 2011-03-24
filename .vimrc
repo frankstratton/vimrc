@@ -80,9 +80,12 @@ if has("syntax")
         syntax on
 "       hi! Comment  term=bold  ctermfg=cyan  guifg=Blue
 endif
-if &term=="rxvt"
-        set t_Co=8
-        set t_Sf=^[[3%dm
-        set t_Sb=^[[4%dm
+
+if has("gui_running")
+	set guioptions=egmrt
+	colorscheme railscasts
 endif
 
+"set t_Co=16
+"set t_Sf=^[[3%dm
+"set t_Sb=^[[4%dm
