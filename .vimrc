@@ -32,6 +32,31 @@
   set   noexpandtab
 " autocmd!
 
+" set the runtime path to include Vundle and initialize
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'sjl/badwolf'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'fatih/vim-go'
+Plugin 'peitalin/vim-jsx-typescript'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Make the gutters darker than the background.
+let g:badwolf_darkgutter = 1
+
 filetype plugin on
 filetype indent on
 set autoread
@@ -59,6 +84,7 @@ autocmd FileType mail set tw=72 nowrap
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 
+
 " What to use for an indent.
 " This will affect Ctrl-T and 'autoindent'.
 " Python: 4 spaces
@@ -83,9 +109,10 @@ endif
 
 if has("gui_running")
 	set guioptions=egmrt
-	colorscheme railscasts
+	colorscheme badwolf 
 endif
 
 "set t_Co=16
 "set t_Sf=^[[3%dm
 "set t_Sb=^[[4%dm
+
